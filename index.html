@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/logo.svg" />
+    <title>Tastebite</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Nav Bar  Section-->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light px-2 px-lg-4 fixed-top"
+    >
+      <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./assets/logo.svg"
+            alt="Logo"
+            class="logo"
+            width="120"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="custom-toggler">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+            <span class="bar3"></span>
+          </div>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <ul
+            class="navbar-nav md:m-auto mb-2 mb-lg-0 d-flex justify-content-center flex-grow-1 mb-3 md-mb-0 mt-md-0 mt-3"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button
+              class="btn search me-2"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#searchModal"
+            >
+              <img
+                src="./assets/search.png"
+                alt="search"
+                width="30"
+                height="30"
+              />
+            </button>
+            <!-- Dropdown Button -->
+            <div class="dropdown">
+              <button
+                class="btn avatar dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./assets/avatar.png"
+                  alt="avatar"
+                  width="30"
+                  height="30"
+                />
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-custom"
+                aria-labelledby="dropdownMenuButton2"
+              >
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">Search</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search..."
+              id="searchInput"
+            />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn bg-orange">Search</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <div class="hero-section container pt-5">
+      <div class="hero-content col-md-6 col-12">
+        <p>
+          <img src="./assets/arrow.svg" alt="arrow" class="me-2" />85% would
+          make this again
+        </p>
+        <h1 class="display-4">Mighty Super Cheesecake</h1>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
+          quaerat voluptatem repellendus, velit iste cupiditate eos quos aperiam
+          dolores!
+        </p>
+        <a
+          href="#"
+          class="nextButton d-flex align-items-center justify-content-start"
+        >
+          Learn More
+          <img src="./assets/next.svg" alt="" class="ms-1 ml-2 next-icon" />
+        </a>
+      </div>
+      <div class="hero-image d-block col-md-6 col-12">
+        <img src="./assets/main.jpg" alt="Delicious food" />
+        <div class="overlay-text">Our Nice Food</div>
+      </div>
+    </div>
+
+    <!--Slider Section -->
+
+    <div class="container my-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="section-title">Our Food</h2>
+      </div>
+      <div class="slider-container">
+        <button class="prev" onclick="moveSlide(-1)">
+          <img src="./assets/lArrow.png" alt="lArrow" width="30" />
+        </button>
+        <div class="slider">
+          <div class="slide">
+            <img src="./assets/serv4.jpg" alt="Fish" class="circle-image" />
+            <h2 class="name">Fish</h2>
+          </div>
+          <div class="slide">
+            <img src="./assets/serv6.jpg" alt="Pasta" class="circle-image" />
+            <h2 class="name">Pasta</h2>
+          </div>
+          <div class="slide">
+            <img src="./assets/serv4.jpg" alt="Shrimp" class="circle-image" />
+            <h2 class="name">Shrimp</h2>
+          </div>
+          <div class="slide">
+            <img src="./assets/serv3.jpg" alt="Burgers" class="circle-image" />
+            <h2 class="name">Burgers</h2>
+          </div>
+          <div class="slide">
+            <img src="./assets/serv2.jpg" alt="Candies" class="circle-image" />
+            <h2 class="name">Candies</h2>
+          </div>
+          <div class="slide">
+            <img
+              src="./assets/serv1.jpg"
+              alt="Breakfast"
+              class="circle-image"
+            />
+            <h2 class="name">Breakfast</h2>
+          </div>
+          se
+        </div>
+        <button class="next" onclick="moveSlide(1)">
+          <img src="./assets/rArrow.png" alt="rArrow" width="30" />
+        </button>
+      </div>
+    </div>
+
+    /
+    <!--Services Section -->
+
+    <div class="container my-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="section-title">Our Services</h2>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 d-flex flex-column justify-content-between">
+            <img src="./assets/s1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Caramel Strawberry Milkshake</h5>
+              <p class="card-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita velit quibusdam praesentium laboriosam, iste animi.
+              </p>
+            </div>
+            <div class="py-2 mb-3 ms-3">
+              <a href="#" class="myBtn">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 d-flex flex-column justify-content-between">
+            <img src="./assets/s2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Berry Maddness Biscuts</h5>
+              <p class="card-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam cumque quos mollitia ad dignissimos quam deleniti ipsa
+                esse, nihil voluptates adipisci.
+              </p>
+            </div>
+            <div class="py-2 mb-3 ms-3">
+              <a href="#" class="myBtn">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 d-flex flex-column justify-content-between">
+            <img src="./assets/s3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Chocolate and Banana Jar Cake</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                vitae beatae quis dolorem quaerat? Illo magni non enim!
+              </p>
+            </div>
+            <div class="py-2 mb-3 ms-3">
+              <a href="#" class="myBtn">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--About Section-->
+
+    <section class="about-section">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <h2 class="section-title">Who are we?</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-12 mb-4 mb-md-0">
+            <p>
+              At Delicious Bites, we're passionate about serving up
+              mouthwatering fast food and irresistible sweet treats to our
+              community.
+            </p>
+            <p>
+              Our menu is a tantalizing blend of classic fast food favorites and
+              unique. From juicy burgers and crispy fries to decadent cakes,
+              pies, and ice cream.
+            </p>
+            <p>
+              Beyond the food, our vibrant, inviting atmosphere sets the stage
+              for both quick weekday meals and leisurely weekend indulgences.
+              Whether you're grabbing a quick lunch, treating yourself to an
+              afternoon pick-me-up, or celebrating a special occasion.
+            </p>
+            <p>
+              At the heart of our business is a deep-rooted passion for bringing
+              people together through the universal language of delicious food.
+              We're not just a fast food joint – we're a community hub where
+              families, friends, and neighbors can come together to savor the
+              simple pleasures in life.
+            </p>
+          </div>
+          <div class="col-md-6 col-12">
+            <h2>Give Us Your Feedback</h2>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name" class="my-2 text-orange">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                  required
+                />
+                <div class="invalid-feedback" id="name-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="mb-2 text-orange">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <div class="invalid-feedback" id="email-error"></div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="mb-2 text-orange">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Enter your message"
+                  required
+                ></textarea>
+                <div class="invalid-feedback" id="message-error"></div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  type="submit"
+                  class="btn bg-orange text-white d-flex justify-content-end"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+
+            <!-- Bootstrap Modal -->
+            <div
+              class="modal fade"
+              id="successModal"
+              tabindex="-1"
+              aria-labelledby="successModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Success!</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    Your message has been sent successfully.
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn bg-orange"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer Section -->
+
+    <section class="w-100 bg-dark">
+      <div class="container">
+        <footer class="position-relative d-flex flex-wrap">
+          <div
+            class="subscribe d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <div class="col-md-6 col-12">
+              <h1 class="text-white sub-title">Stay Connected</h1>
+              <p class="text-white desc-title">
+                Sign up for our newsletter to receive the latest updates,
+                special offers, and exclusive content.
+              </p>
+            </div>
+            <div class="col-md-6 col-12 d-flex">
+              <div class="form-group d-flex mb-0 flex-grow-1">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <button type="submit" class="btn bg-black text-white">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <div class="col-12 d-flex flex-wrap mt-5 pt-4">
+            <div class="col-md-3 col-12 mb-4 mb-md-0">
+              <img
+                src="./assets/logo.svg"
+                alt=""
+                class="mb-3"
+                class="logoFooter"
+              />
+              <p class="pe-2 text-white me-2">
+                We're passionate about serving up the finest, freshest local
+                cuisine in a warm and welcoming atmosphere.
+              </p>
+            </div>
+            <div class="col-md-2 col-6">
+              <h2 class="text-orange">Sections</h2>
+              <ul class="list-unstyled text-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-6">
+              <h2 class="text-orange">Links</h2>
+              <ul class="list-unstyled text-white">
+                <li><a href="#" class="">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-2 col-6">
+              <h2 class="text-orange">Contact</h2>
+              <ul class="list-unstyled text-white">
+                <li><a href="#" class="">example@gmail.com</a></li>
+                <li><a href="#">Syria</a></li>
+                <li><a href="#">+963 997 493 561</a></li>
+              </ul>
+            </div>
+
+            <div
+              class="col-md-3 col-6 d-flex justify-content-md-end justify-content-center"
+            >
+              <div class="mb-4 mb-md-0">
+                <h2 class="text-orange">Follow Us</h2>
+                <div class="d-flex justify-content-between mt-3">
+                  <a href="#" class="btn btn-outline-primary btn-sm mr-2">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="btn btn-outline-info btn-sm mr-2">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-outline-danger btn-sm mr-2">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="btn btn-outline-success btn-sm mr-2">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row text-orange my-4 my-md-0">
+            @2024 Copy Rights . Made By Ali Mohammad
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
