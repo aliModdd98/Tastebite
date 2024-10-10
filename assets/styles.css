@@ -245,7 +245,7 @@ a {
 }
 
 .slide {
-  min-width: 33.33%;
+  min-width: 25%;
   box-sizing: border-box;
   padding: 10px;
   display: flex;
@@ -256,8 +256,8 @@ a {
 }
 
 .circle-image {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #ddd;
